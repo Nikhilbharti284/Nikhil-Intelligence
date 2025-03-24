@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes slideInOutLeft {
+            0%, 100% { transform: translateX(-50px); opacity: 0; }
+            15%, 85% { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideInOutRight {
+            0%, 100% { transform: translateX(50px); opacity: 0; }
+            15%, 85% { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQEwVIcvRWodyQ/profile-displayphoto-shrink_800_800/B56ZOvGIdQGcAg-/0/1733809441995?e=1748476800&v=beta&t=0xB56YsfCvMXsmvFCBwVLFnp5PeLJdpdNG56fJ8NDhM" alt="Nikhil AI Logo" />
+                <span>Nikhil AI</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Features.html">Features</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+
+            <!-- Mobile menu toggle -->
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Animated Welcome Text -->
+        <div class="welcome-text" id="animated-welcome">
+            <!-- Words will be added by JavaScript -->
+        </div>
+        
+        <div id="chat-area">
+            <!-- Chat History -->
+            <div id="chat-history">
+                <!-- Sample message for demonstration -->
+                <div class="chat-message ai-message">
+                    <p>Hello! I'm Nikhil AI. How can I help you today?</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div id="input-container">
+                <label for="file-input" class="file-input-label" title="Upload Document">
+                    <i class="fas fa-paperclip"></i>
+                    <input type="file" id="file-input" accept=".txt,.pdf,.docx" hidden />
+                </label>
+                <textarea
+                    id="user-input"
+                    placeholder="Ask anything..."
+                    rows="1"
+                    style="resize: none; width: 100%;"
+                ></textarea>
+                <button type="submit" title="Send Message"><i class="fas fa-paper-plane"></i> Send</button>
+                <button id="speaking-toggle" title="Toggle Voice Response">
+                    <i class="fas fa-volume-mute"></i> <span>Speaking: Off</span>
+                </button>
+                <button id="pause-button" disabled title="Pause/Resume Speech">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+            <div id="status"></div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="feature-title">Natural Conversations</h3>
+                <p>Engage in fluid, human-like conversations with our advanced natural language processing technology. Ask questions, get information, or just chat naturally.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3 class="feature-title">Document Analysis</h3>
+                <p>Upload documents and receive instant insights, summaries, and answers to your questions. Perfect for research, studying, or quickly understanding complex content.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microphone"></i>
+                </div>
+                <h3 class="feature-title">Voice Interaction</h3>
+                <p>Speak naturally and get voice responses with our advanced speech technology. Enable voice mode for a hands-free experience when you're on the go.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Nikhil AI. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="Privacy.html">Privacy Policy</a>
+                <a href="Terms.html">Terms of Service</a>
+                <a href="FAQ.html">FAQ</a>
+                <a href="Contact.html">Support</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script src="script.js"></script>
+</body>
+</html>

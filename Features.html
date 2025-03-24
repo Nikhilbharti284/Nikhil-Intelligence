@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Features - AI Assistant</title>
+  <!-- Font Awesome for social icons in the footer -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <style>
+    /* -------------------- GLOBAL STYLES -------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* -------------------- NAVBAR -------------------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, #4568dc, #3a6073);
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo i {
+      color: #7ee2ff;
+      font-size: 1.8rem;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+    .nav-links li {
+      margin: 0;
+    }
+    .nav-links a {
+      color: #fff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: #fff;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    /* -------------------- MAIN CONTENT -------------------- */
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 80px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+    h1 {
+      color: #222;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .feature-list {
+      text-align: left;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+    }
+    .feature-list li {
+      font-size: 1.1em;
+      color: #444;
+      margin: 15px 0;
+      padding: 12px;
+      background: #e8e8e8;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .feature-list li:hover {
+      background: #d4d4d4;
+    }
+
+    /* -------------------- FOOTER -------------------- */
+    footer {
+      background-color: #3a6073;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 50px;
+    }
+    .footer-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .social-links {
+      margin: 1rem 0;
+    }
+    .social-links a {
+      color: #fff;
+      margin: 0 0.5rem;
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .social-links a:hover {
+      transform: translateY(-3px);
+    }
+    .social-links i {
+      font-size: 1.2rem;
+    }
+    .footer-text {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* -------------------- MEDIA QUERIES -------------------- */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: linear-gradient(135deg, #4568dc, #3a6073);
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .container {
+        margin: 60px auto;
+        width: 95%;
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .feature-list li {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- -------------------- NAVBAR -------------------- -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <i class="fas fa-robot"></i>
+        AI Assistant
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Features.html" class="active">Features</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- -------------------- MAIN CONTENT -------------------- -->
+  <div class="container">
+    <h1>Advanced Features of AI Assistant</h1>
+    <ul class="feature-list">
+      <li>AI-powered task automation with deep learning</li>
+      <li>Advanced natural language processing</li>
+      <li>Real-time voice and text assistance</li>
+      <li>Predictive analytics for smarter decisions</li>
+      <li>Multi-language support with adaptive learning</li>
+      <li>Seamless integration with third-party apps</li>
+      <li>Enhanced data security and encryption</li>
+    </ul>
+  </div>
+
+  <!-- -------------------- FOOTER -------------------- -->
+  <footer>
+    <div class="footer-container">
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="footer-text">
+        © 2025 AI Assistant. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- -------------------- SCRIPTS -------------------- -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      mobileMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
